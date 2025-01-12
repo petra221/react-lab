@@ -25,6 +25,9 @@ if(title.length < 5) {
     setTitle(event.target.value)
   }
 
+  // function handleClick(event){
+  //   alert(title)
+  // }
 
 // cernary operator ? :
   return (
@@ -42,6 +45,7 @@ if(title.length < 5) {
         {title.length > 0 && <div>{naglowek}</div>}
 
         <input type="text" value={title} onChange={handleChange}/>
+        <button type="button" onClick={() => alert(title)}> Pokaz tytul filmu </button>
 
         </div>
       </header>
@@ -52,4 +56,3 @@ if(title.length < 5) {
 export default App;
 
 
-// ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILvssa4A0kWatKokkOnAmDvM+lhoAD5c9I+OTjqtFBM2 pet.ra@o2.pl
