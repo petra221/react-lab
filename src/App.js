@@ -1,12 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+// aby uzywac zmiennej ktora jest reaktywna to stan komponantu dla title 
+import {useState} from "react";
+
+
 
 function App() {
-let title = 'Martix'
+// let title = 'Martix'
+const [title, setTitle] =useState('Wall-E')
 
-function handleChange(event){
-console.log(event.target.value)  
-}
+  function handleChange(event){
+    // title = event.target.value  <-- wronga aproach
+    setTitle(event.target.value)
+  }
 
 
 
@@ -18,7 +24,7 @@ console.log(event.target.value)
         
         <div>
         <h1>My favourite movies to watch</h1>
-        <h2>My favourite movies for today watch {title}</h2>
+        <h2>My favourite movies for today to watch is {title}</h2>
         <input type="text" onChange={handleChange}/>
         </div>
       </header>
@@ -27,3 +33,6 @@ console.log(event.target.value)
 }
 
 export default App;
+
+
+// ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILvssa4A0kWatKokkOnAmDvM+lhoAD5c9I+OTjqtFBM2 pet.ra@o2.pl
